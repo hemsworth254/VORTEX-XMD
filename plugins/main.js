@@ -5,7 +5,7 @@ const {runtime} = require('../lib/functions')
 const axios = require('axios')
 
 cmd({
-    pattern: "menu2",
+    pattern: "menu",
     alias: "allmenu",
     desc: "menu the bot",
     category: "menu",
@@ -235,7 +235,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/5hdckf.jpeg` },
+                image: { url: `https://i.ibb.co/Hf231pLF/hanstz.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],

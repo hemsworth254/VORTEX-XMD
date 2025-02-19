@@ -59,3 +59,93 @@ cmd({
     reply(`Error fetching repository data 🤕: ${error.message}`);
   }
 });
+
+cmd({
+    pattern: "repo2",
+    alias: ["sc", "script", "info"],
+    desc: "Fetch information about a GitHub repository.",
+    react: "💫",
+    category: "info",
+    filename: __filename,
+},
+async (conn, mek, m, { from, reply }) => {
+    const githubRepoURL = 'https://github.com/Mrhanstz/VORTEX-XMD';
+
+    try {
+        // Extract username and repo name from the URL
+        const [, username, repoName] = githubRepoURL.match(/github\.com\/([^/]+)\/([^/]+)/);
+
+        // Fetch repository details using GitHub API
+        const response = await fetch(`https://api.github.com/repos/${username}/${repoName}`);
+        
+        if (!response.ok) {
+            throw new Error(`GitHub API request failed with status ${response.status}`);
+        }
+
+        const repoData = await response.json();
+
+        // Format the repository information
+        const formattedInfo = `*> Hello There GMAX W.A BOT User! 👋😊* 
+
+> Don't forget to star & fork the repo🌟🍴
+
+https://github.com/Mrhanstz/VORTEX-XMD
+──────────────────
+${readMore}
+\`BOT NAME:\`💫
+> ${repoData.name}
+
+\`OWNER NAME:\`👨‍💻
+> ${repoData.owner.login}
+
+\`STARS:\`🌟
+> ${repoData.stargazers_count}
+
+\`FORKS:\`🍴
+> ${repoData.forks_count}
+
+\`VORTEX-USERS:\` 👥
+> ${userCount}
+
+──────────────────
+\n> *© Made by HansTz* `;
+
+        // Send an image with the formatted info as a caption and context info
+        await conn.sendMessage(from, {
+            image: { url: `https://files.catbox.moe/lvvpzw.jpeg` },
+            caption: formattedInfo,
+            contextInfo: { 
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363395768630577@newsletter',
+                    newsletterName: 'Vortex-Xmd',
+                    serverMessageId: 143
+                }
+            }
+        }, { quoted: mek });
+
+        // Send the audio file with context info
+        await conn.sendMessage(from, {
+            audio: { url: 'https://github.com/devhanstz/VORTEX-XMD-DATA/raw/refs/heads/main/KingHans/HansTz.mp3' },
+            mimetype: 'audio/mp4',
+            ptt: true,
+            contextInfo: { 
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363395768630577@newsletter',
+                    newsletterName: 'Vortex-Xmd',
+                    serverMessageId: 143
+                }
+            }
+        }, { quoted: mek });
+
+    } catch (error) {
+        console.error("Error in repo command:", error);
+        reply("Sorry, something went wrong while fetching the repository information. Please try again later.");
+    }
+});
+

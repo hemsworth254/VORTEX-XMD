@@ -23,7 +23,7 @@ OWNER_NAME: process.env.OWNER_NAME || "𝐕𝐎𝐑𝐓𝐄𝐗-𝐗𝐌𝐃",
 // add bot owner name
 DESCRIPTION: process.env.DESCRIPTION || "*© 𝐕𝐎𝐑𝐓𝐄𝐗-𝐗𝐌𝐃*",
 // add bot owner name    
-ALIVE_IMG: process.env.ALIVE_IMG || "https://imgur.com/a/brpeyfS",
+ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/lvvpzw.jpeg",
 // add img for alive msg
 LIVE_MSG: process.env.LIVE_MSG || "> VORTEX-XMD AND ALIVE\n\n\nKEEP USING VORTEX-XMD FROM HANSTZ TECH⚡",
 // add alive msg here 
@@ -51,14 +51,14 @@ AUTO_REPLY: process.env.AUTO_REPLY || "false",
 // make true or false automatic text reply 
 HEART_REACT: process.env.HEART_REACT || "false",
 // make this true or false for heart reactions only 
-OWNER_REACT: process.env.OWNER_REACT || "true",
+OWNER_REACT: process.env.OWNER_REACT || "false",
 // make it true or fasle for only react on owner msg only 
 ALWAYS_ONLINE: process.env.ALWAYS_ONLINE || "true",
 // maks true for always online 
 PUBLIC_MODE: process.env.PUBLIC_MODE || "true",
 // make false if want private mod
-AUTO_TYPING: process.env.AUTO_TYPING || "true",
+AUTO_TYPING: process.env.AUTO_TYPING || "false",
 // true for automatic show typing   
-AUTO_RECORDING: process.env.AUTO_RECORDING || "true"
+AUTO_RECORDING: process.env.AUTO_RECORDING || "false"
 // make it true for auto recoding 
 };

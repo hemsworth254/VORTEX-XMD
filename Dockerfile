@@ -12,6 +12,8 @@ COPY package.json .
 
 RUN npm install && npm install -g qrcode-terminal pm2
 RUN npm install dotenv
+RUN npm install ytdl-core
+RUN npm install axois
 
 
 COPY . .

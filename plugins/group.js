@@ -15,10 +15,10 @@ const {
   fetchJson
 } = require("../lib/functions");
 const _0x235552 = {
-  'pattern': 'joinrequests',
+  pattern: 'joinrequests',
   'desc': "Get list of participants who requested to join the group",
   'react': '📋',
-  'category': 'group',
+  category: "group",
   'filename': __filename
 };
 cmd(_0x235552, async (_0x5627f6, _0x3c9922, _0x196741, {
@@ -56,7 +56,7 @@ cmd(_0x235552, async (_0x5627f6, _0x3c9922, _0x196741, {
   }
 });
 const _0x485005 = {
-  'pattern': "allreq",
+  pattern: "allreq",
   'desc': "Approve or reject all join requests",
   'react': '✅',
   'category': "group",
@@ -99,11 +99,11 @@ cmd(_0x485005, async (_0x49ae26, _0xcdfa27, _0x2d27f9, {
   }
 });
 const _0x3bcce0 = {
-  'pattern': "disappear",
+  pattern: "disappear",
   'react': "🌪️",
   'alias': ['dm'],
   'desc': "Turn on/off disappearing messages.",
-  'category': "main",
+  'category': "group",
   'filename': __filename
 };
 cmd(_0x3bcce0, async (_0x4981f9, _0x1ac44e, _0x59ef0d, {
@@ -174,11 +174,11 @@ cmd(_0x3bcce0, async (_0x4981f9, _0x1ac44e, _0x59ef0d, {
   }
 });
 const _0x592aaf = {
-  'pattern': "senddm",
+  pattern: "senddm",
   'react': "🌪️",
   'alias': ["senddisappear"],
   'desc': "Send a disappearing message.",
-  'category': "main",
+  'category': "group",
   'filename': __filename
 };
 cmd(_0x592aaf, async (_0x43277d, _0x49a4bf, _0x1a9eee, {
@@ -211,7 +211,7 @@ cmd(_0x592aaf, async (_0x43277d, _0x49a4bf, _0x1a9eee, {
   await _0x43277d.sendMessage(_0x4121e3, _0x57700b, _0x236fb8);
 });
 const _0x4f6b5b = {
-  'pattern': 'mute',
+  pattern: 'mute',
   'react': '🔇',
   'alias': ["close", "f_mute"],
   'desc': "Change to group settings to only admins can send messages.",
@@ -285,7 +285,7 @@ cmd(_0x4f6b5b, async (_0x1db32, _0x1034bb, _0x25ca2a, {
   }
 });
 const _0x87e572 = {
-  'pattern': 'unmute',
+  pattern: 'unmute',
   'react': '🔇',
   'alias': ["open", 'f_unmute'],
   'desc': "Change to group settings to all members can send messages.",
@@ -359,7 +359,7 @@ cmd(_0x87e572, async (_0x25e894, _0x173e12, _0x5cc272, {
   }
 });
 const _0x2bff43 = {
-  'pattern': "lockgs",
+  pattern: "lockgs",
   'react': '🔇',
   'alias': ["lockgsettings"],
   'desc': "Change to group settings to only admins can edit group info",
@@ -433,11 +433,11 @@ cmd(_0x2bff43, async (_0x1544c8, _0x3a8967, _0x3a98a6, {
   }
 });
 const _0x285abb = {
-  'pattern': 'unlockgs',
+  pattern: 'unlockgs',
   'react': '🔓',
   'alias': ['unlockgsettings'],
   'desc': "Change to group settings to all members can edit group info",
-  'category': 'group',
+  category: "group",
   'use': '.unlockgs',
   'filename': __filename
 };
@@ -507,7 +507,7 @@ cmd(_0x285abb, async (_0x5b301d, _0x3b7b70, _0x2cc26e, {
   }
 });
 const _0x2ad4fd = {
-  'pattern': "djdjdjdjdjdjdjdjdj",
+  pattern: "djdjdjdjdjdjdjdjdj",
   'react': '🔓',
   'alias': ["ayeeeeeeeeee", "lllllllllllllll", 'nnnnn', "ppppppppopo", "ttttttttttttttttt"],
   'desc': "To leave from the group",
@@ -574,11 +574,11 @@ cmd(_0x2ad4fd, async (_0x57ca03, _0x3887fa, _0x4fce7e, {
   }
 });
 const _0x293215 = {
-  'pattern': "updategname",
+  pattern: "updategname",
   'react': '🔓',
   'alias': ["upgname", 'gname'],
   'desc': "To Change the group name",
-  'category': 'group',
+  category: "group",
   'use': '.updategname',
   'filename': __filename
 };
@@ -651,7 +651,7 @@ cmd(_0x293215, async (_0x2aa48a, _0x3602cd, _0x1cbce2, {
   }
 });
 const _0x19cdd8 = {
-  'pattern': "updategdesc",
+  pattern: "updategdesc",
   'react': '🔓',
   'alias': ['upgdesc', "gdesc"],
   'desc': "To Change the group description",
@@ -728,7 +728,7 @@ cmd(_0x19cdd8, async (_0x3b5d59, _0x500dad, _0xdfb924, {
   }
 });
 const _0x53f490 = {
-  'pattern': "join",
+  pattern: "join",
   'react': '📬',
   'alias': ["joinme", "f_join"],
   'desc': "To Join a Group from Invite link",
@@ -794,7 +794,7 @@ cmd(_0x53f490, async (_0x47c9d7, _0x35ca33, _0x4e5ffe, {
   }
 });
 const _0x4df201 = {
-  'pattern': "invite",
+  pattern: "invite",
   'react': "🖇️",
   'alias': ['grouplink', "glink"],
   'desc': "To Get the Group Invite link",
@@ -868,11 +868,11 @@ cmd(_0x4df201, async (_0x5ca0b3, _0x1d2aac, _0x5ae3b9, {
   }
 });
 const _0x34bd2a = {
-  'pattern': "revoke",
+  pattern: "revoke",
   'react': "🖇️",
   'alias': ["revokegrouplink", "resetglink", "revokelink", "f_revoke"],
   'desc': "To Reset the group link",
-  'category': 'group',
+  category: "group",
   'use': '.revoke',
   'filename': __filename
 };
@@ -942,7 +942,7 @@ cmd(_0x34bd2a, async (_0xd64721, _0x5b20b2, _0x2bf8dd, {
   }
 });
 const _0x57538f = {
-  'pattern': "kick",
+  pattern: "kick",
   'react': '🥏',
   'alias': ["remove"],
   'desc': "To Remove a participant from Group",
@@ -1021,11 +1021,11 @@ cmd(_0x57538f, async (_0xdf818e, _0xa69965, _0x290fe5, {
   }
 });
 const _0xd699f4 = {
-  'pattern': "promote",
+  pattern: "promote",
   'react': '🥏',
   'alias': ["addadmin"],
   'desc': "To Add a participatant as a Admin",
-  'category': 'group',
+  category: "group",
   'use': ".promote",
   'filename': __filename
 };
@@ -1104,7 +1104,7 @@ cmd(_0xd699f4, async (_0x4924ea, _0x5010b3, _0x3c1d65, {
   }
 });
 const _0x10f253 = {
-  'pattern': "demote",
+  pattern: "demote",
   'react': '🥏',
   'alias': ["removeadmin"],
   'desc': "To Demote Admin to Member",
@@ -1187,7 +1187,7 @@ cmd(_0x10f253, async (_0x100559, _0x26bd3b, _0x19d9e3, {
   }
 });
 const _0x53a4af = {
-  'pattern': "tagall",
+  pattern: "tagall",
   'react': '🔊',
   'alias': ["f_tagall"],
   'desc': "To Tag all Members",
@@ -1265,7 +1265,7 @@ cmd(_0x53a4af, async (_0x4b7a1c, _0x355fbd, _0xc06583, {
   }
 });
 const _0x3220aa = {
-  'pattern': "hidetag",
+  pattern: "hidetag",
   'react': '🔊',
   'alias': ["tag", "f_tag"],
   'desc': "To Tag all Members for Message",
@@ -1343,7 +1343,7 @@ cmd(_0x3220aa, async (_0x101a30, _0x3470bb, _0x2d7d33, {
   }
 });
 const _0x446ca7 = {
-  'pattern': "tagx",
+  pattern: "tagx",
   'react': '🔊',
   'alias': ['taggc', 'mentionall'],
   'desc': "To Tag all Members for Message",
@@ -1408,7 +1408,7 @@ cmd(_0x446ca7, async (_0x4ccc2b, _0x46df43, _0x157a68, {
   }
 });
 const _0x4c04aa = {
-  'pattern': 'ginfo',
+  pattern: 'ginfo',
   'react': '🥏',
   'alias': ["groupinfo"],
   'desc': "Get group informations.",
